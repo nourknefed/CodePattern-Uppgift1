@@ -1,0 +1,12 @@
+C:\Users\admin\Downloads\Code pattern\training\Kennel\KennelLibrary\bin\Debug\net5.0\KennelLibrary.deps.json
+C:\Users\admin\Downloads\Code pattern\training\Kennel\KennelLibrary\bin\Debug\net5.0\KennelLibrary.dll
+C:\Users\admin\Downloads\Code pattern\training\Kennel\KennelLibrary\bin\Debug\net5.0\ref\KennelLibrary.dll
+C:\Users\admin\Downloads\Code pattern\training\Kennel\KennelLibrary\bin\Debug\net5.0\KennelLibrary.pdb
+C:\Users\admin\Downloads\Code pattern\training\Kennel\KennelLibrary\obj\Debug\net5.0\KennelLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\admin\Downloads\Code pattern\training\Kennel\KennelLibrary\obj\Debug\net5.0\KennelLibrary.AssemblyInfoInputs.cache
+C:\Users\admin\Downloads\Code pattern\training\Kennel\KennelLibrary\obj\Debug\net5.0\KennelLibrary.AssemblyInfo.cs
+C:\Users\admin\Downloads\Code pattern\training\Kennel\KennelLibrary\obj\Debug\net5.0\KennelLibrary.csproj.CoreCompileInputs.cache
+C:\Users\admin\Downloads\Code pattern\training\Kennel\KennelLibrary\obj\Debug\net5.0\KennelLibrary.dll
+C:\Users\admin\Downloads\Code pattern\training\Kennel\KennelLibrary\obj\Debug\net5.0\ref\KennelLibrary.dll
+C:\Users\admin\Downloads\Code pattern\training\Kennel\KennelLibrary\obj\Debug\net5.0\KennelLibrary.pdb
+C:\Users\admin\Downloads\Code pattern\training\Kennel\KennelLibrary\obj\Debug\net5.0\KennelLibrary.csprojAssemblyReference.cache
