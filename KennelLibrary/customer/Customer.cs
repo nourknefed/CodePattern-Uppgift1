@@ -17,7 +17,7 @@ namespace KennelLibrary.customer
         {
             this.FirstName = FirstName;
             this.LastName = LastName;
-            List<IAnimal> list = new();
+            
         }
 
         public Customer()
@@ -33,7 +33,7 @@ namespace KennelLibrary.customer
 
         public string FullName => FirstName + LastName;
 
-        public List<IAnimal> Animals { get; set; }
+     
         
 
     }

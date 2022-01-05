@@ -9,6 +9,7 @@ namespace KennelLibrary.service
 {
     public class Clean : IClean
     {
+        
         public string Name { get; set; }
         public string Description { get; set; }
         public decimal Cost { get; set; }
@@ -17,7 +18,9 @@ namespace KennelLibrary.service
 
         public Clean()
         {
-            Name = " Clean Service";
+           
+
+            Name = "Clean Service";
             Description = "you get your pet clean and pretty";
             Cost = 10m;
         }

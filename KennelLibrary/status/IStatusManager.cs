@@ -6,11 +6,11 @@ namespace KennelLibrary.status
     {
         decimal DurationCost { get; set; }
         
-        void CheckOut(string animalname);
+        void CheckOut(IAnimal animalname);
 
         decimal GetDuration();
 
-        void CheckIn(string animalname);
+        void CheckIn(IAnimal animalname);
         
     }
 }

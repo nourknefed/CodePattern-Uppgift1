@@ -1,5 +1,4 @@
 C:\Users\admin\Downloads\Code pattern\training\Kennel\Kennel\bin\Debug\net5.0\KennelLibrary.dll
-C:\Users\admin\Downloads\Code pattern\training\Kennel\Kennel\obj\Debug\net5.0\Kennel.csprojAssemblyReference.cache
 C:\Users\admin\Downloads\Code pattern\training\Kennel\Kennel\obj\Debug\net5.0\Kennel.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\admin\Downloads\Code pattern\training\Kennel\Kennel\obj\Debug\net5.0\Kennel.AssemblyInfoInputs.cache
 C:\Users\admin\Downloads\Code pattern\training\Kennel\Kennel\obj\Debug\net5.0\Kennel.AssemblyInfo.cs
@@ -18,3 +17,4 @@ C:\Users\admin\Downloads\Code pattern\training\Kennel\Kennel\obj\Debug\net5.0\Ke
 C:\Users\admin\Downloads\Code pattern\training\Kennel\Kennel\obj\Debug\net5.0\ref\Kennel.dll
 C:\Users\admin\Downloads\Code pattern\training\Kennel\Kennel\obj\Debug\net5.0\Kennel.pdb
 C:\Users\admin\Downloads\Code pattern\training\Kennel\Kennel\obj\Debug\net5.0\Kennel.genruntimeconfig.cache
+C:\Users\admin\Downloads\Code pattern\training\Kennel\Kennel\obj\Debug\net5.0\Kennel.csproj.AssemblyReference.cache

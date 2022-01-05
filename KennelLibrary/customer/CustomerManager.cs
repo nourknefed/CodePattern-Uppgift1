@@ -12,7 +12,7 @@ namespace KennelLibrary.customer
     {
         private readonly Customer.factory _customerfactory;
         private IUserInputOutput _inputOut;
-        List<Customer> customers = new List<Customer>();
+        List<ICustomer> customers = new List<ICustomer>();
 
         public CustomerManager( IUserInputOutput inputOut, Customer.factory customerfactory)
         {
@@ -22,10 +22,7 @@ namespace KennelLibrary.customer
 
 
 
-        public Customer CreateCustomer()
-        {
-            return new Customer();
-        }
+       
 
         public void AddCustomer()
         {
@@ -41,6 +38,8 @@ namespace KennelLibrary.customer
 
           
             customers.Add(_customerfactory(FirstName, LastName));
+
+            _inputOut.Log("New customer is registered");
         }
 
         public void ShowAllCustomers()

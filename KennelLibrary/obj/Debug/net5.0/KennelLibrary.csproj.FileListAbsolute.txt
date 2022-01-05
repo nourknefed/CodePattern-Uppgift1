@@ -9,4 +9,4 @@ C:\Users\admin\Downloads\Code pattern\training\Kennel\KennelLibrary\obj\Debug\ne
 C:\Users\admin\Downloads\Code pattern\training\Kennel\KennelLibrary\obj\Debug\net5.0\KennelLibrary.dll
 C:\Users\admin\Downloads\Code pattern\training\Kennel\KennelLibrary\obj\Debug\net5.0\ref\KennelLibrary.dll
 C:\Users\admin\Downloads\Code pattern\training\Kennel\KennelLibrary\obj\Debug\net5.0\KennelLibrary.pdb
-C:\Users\admin\Downloads\Code pattern\training\Kennel\KennelLibrary\obj\Debug\net5.0\KennelLibrary.csprojAssemblyReference.cache
+C:\Users\admin\Downloads\Code pattern\training\Kennel\KennelLibrary\obj\Debug\net5.0\KennelLibrary.csproj.AssemblyReference.cache

@@ -6,7 +6,7 @@ namespace KennelLibrary.customer
     {
         
 
-        Customer CreateCustomer();
+        
         void AddCustomer();
         void ShowAllCustomers();
         void GetlastCustomer();

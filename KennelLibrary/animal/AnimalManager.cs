@@ -13,8 +13,7 @@ namespace KennelLibrary.animal
     public class AnimalManager : IAnimalManager
     {
         private IUserInputOutput _inputOut;
-        private ICustomerManager _customer;
-        private IStatusManager _status;
+        private IStatusManager _statusManager;
         private IAnimalServiceManager _animalServiceManager;
 
 
@@ -22,32 +21,33 @@ namespace KennelLibrary.animal
         private readonly Animal.factory _animalfactory;
         private readonly Customer.factory _customerfactory;
 
-        Animal animal = new Animal();
-        List<Animal> animals = new List<Animal>();
-        List<Customer> customers = new List<Customer>();
+      
+        List<IAnimal> animals = new List<IAnimal>();
+        List<ICustomer> customers = new List<ICustomer>();
 
 
         
-        Status status = new();
+       
 
 
         public AnimalManager(Animal.factory animalfactory, IUserInputOutput inputOut,
-            ICustomerManager customer, Customer.factory customerfactory, IStatusManager status, IAnimalServiceManager animalServiceManager)
+            ICustomerManager customer, Customer.factory customerfactory, IStatusManager statusManager, IAnimalServiceManager animalServiceManager)
         {
             _animalfactory = animalfactory;
             _inputOut = inputOut;
-            _customer = customer;
+          
             _customerfactory = customerfactory;
-            _status = status;
+            _statusManager = statusManager;
             _animalServiceManager = animalServiceManager;
-            animal.services = new();
+       
+            
 
         }
 
 
-        public Animal CreateAnimal(string Name, string Type, ICustomer customer)
+        public IAnimal CreateAnimal(string Name, string Type, ICustomer customer)
         {
-            return new Animal(Name, Type, customer);
+            return _animalfactory(Name, Type, customer);
         }
 
         //Add new Customer
@@ -84,6 +84,8 @@ namespace KennelLibrary.animal
 
             animals.Add(_animalfactory(Name, Type, lastCustomer));
 
+            _inputOut.Log("New animal is registered");
+
             
         }
 
@@ -115,7 +117,8 @@ namespace KennelLibrary.animal
             }
             else
             {
-                 _status.CheckIn(animalname);
+               
+                 _statusManager.CheckIn(foundanimal);
 
             }
 
@@ -134,7 +137,7 @@ namespace KennelLibrary.animal
             }
             else
             {
-                _status.CheckOut(animalname);
+                _statusManager.CheckOut(foundanimal);
                
             }
 
@@ -143,7 +146,7 @@ namespace KennelLibrary.animal
         //get duration cost
         public void durationcost()
         {
-            _status.GetDuration();
+            _statusManager.GetDuration();
         }
 
         // add clean to an animal
@@ -171,9 +174,9 @@ namespace KennelLibrary.animal
         // get all costs to an animal
         public decimal ClaculateCosts()
         {
-            decimal total = _animalServiceManager.GetSumOfServices() + _status.GetDuration();
+            decimal total = _animalServiceManager.GetSumOfServices() + _statusManager.GetDuration();
 
-            Console.WriteLine($" The Toltal Cost Is :  -----------------> {total} $");
+            Console.WriteLine($" The Total Cost Is :  -----------------> {total} $");
 
             return total;
 

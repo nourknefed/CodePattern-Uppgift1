@@ -10,11 +10,12 @@ namespace KennelLibrary.status
 {
     public class StatusManager : IStatusManager
     {
+       // public readonly Status.factory _statusfactory;
         public decimal DurationCost { get; set; }
+
         private IAnimal _animal;
-     
-        Status status { get; set; }
         private IUserInputOutput _inputout;
+
 
         
 
@@ -22,20 +23,21 @@ namespace KennelLibrary.status
         {
             _animal = animal;
             _inputout = inputout;
-            status = new();
+           // _statusfactory = statusfactory;
+           
   
         }
 
         // check in 
-        public void CheckIn(string animalname)
+        public void CheckIn(IAnimal animal) // skicka in animal objektet eller om du skickar in namnet ta fram animal objektet
         {
             _inputout.Log("Enter CheckIn Date DD/MM/YYYY");
-            status.CheckInDate = Convert.ToDateTime(Console.ReadLine());
+            _animal.CheckInDate = Convert.ToDateTime(Console.ReadLine());
         
-            status.IsCheckedIn = true;
-            if (status.IsCheckedIn == true)
+            _animal.IsCheckedIn = true;
+            if (_animal.IsCheckedIn == true)
             {
-                _inputout.Log($"Hi: your animal  {animalname} is CheckedIn in {status.CheckInDate}");
+                _inputout.Log($"Hi: your {animal.Type} {animal.Name} is CheckedIn in {_animal.CheckInDate}");
             }
             else
             {
@@ -44,15 +46,15 @@ namespace KennelLibrary.status
         }
 
         // check out
-        public void CheckOut(string animalname)
+        public void CheckOut(IAnimal animal)
         {
             _inputout.Log("Enter CheckOut Date  DD/MM/YYYY");
-            status.CheckOutDate = Convert.ToDateTime(_inputout.GetStringValue());
+            _animal.CheckOutDate = Convert.ToDateTime(_inputout.GetStringValue());
 
-            status.IsCheckedIn = false;
-            if (status.IsCheckedOut == false)
+            _animal.IsCheckedIn = false;
+            if (_animal.IsCheckedIn == false)
             {
-                _inputout.Log($"Hi  your animal {animalname} is Checked Out in {status.CheckOutDate}");
+                _inputout.Log($"Hi  your {animal.Type} {animal.Name} is Checked Out in {_animal.CheckOutDate}");
 
             }
             else
@@ -66,7 +68,7 @@ namespace KennelLibrary.status
         {
             var costperDay = 20;
 
-            var duration = (status.CheckOutDate - status.CheckInDate).TotalDays;
+            var duration = (_animal.CheckOutDate - _animal.CheckInDate).TotalDays;
 
              DurationCost = Convert.ToDecimal (duration * costperDay);
 

@@ -45,7 +45,7 @@ namespace Kennel
             builder.RegisterType<Clean>().As<IClean>();
             builder.RegisterType<ClawClipping>().As<IClawClipping>();
 
-            builder.RegisterType<Status>().As<IStatus>();
+       
             builder.RegisterType<StatusManager>().As<IStatusManager>();
 
 

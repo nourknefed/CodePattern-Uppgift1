@@ -18,6 +18,7 @@ namespace KennelLibrary.animal
             this.Name = Name;
             this.Type = Type;
             this.CustomerName = CustomerName;
+            services = new();
         }
         public Animal()
         {
@@ -32,13 +33,17 @@ namespace KennelLibrary.animal
 
         public ICustomer CustomerName { get; set; }
 
-        public IStatus AnimalStatus { get; set; }
-
         public List<IAnimal> Animals { get; set; }
-
 
         public List<IService> services { get; set; }
 
+        public DateTime CheckInDate { get; set; }
+
+        public DateTime CheckOutDate { get; set; }
+
+        public bool IsCheckedIn { get; set; } = false;
+
+       
 
 
 
@@ -46,16 +51,9 @@ namespace KennelLibrary.animal
 
 
 
-        //public Animal()
-        //{
-
-        //    var clean = new Clean();
-
-        //    //services.Add(clean);
-
-
-        //}
 
     
+
+
     }
 }

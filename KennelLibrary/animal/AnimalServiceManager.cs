@@ -17,25 +17,30 @@ namespace KennelLibrary.animal
 
         //use services
         public decimal ServiceCost { get; set; }
-        Clean clean = new();
-        ClawClipping clawClipping = new();
      
+        IClean Clean { get; set; }
+        IClawClipping ClawClipping { get; set; }
+        
         private IAnimal _animal;
 
-        public AnimalServiceManager(Service.factory servicefactory, IAnimal animal, IStatusManager statusManager)
+        public AnimalServiceManager(Service.factory servicefactory, IAnimal animal, IStatusManager statusManager,IClean clean, IClawClipping clawClipping)
         {
             _servicefactory = servicefactory;
             _animal = animal;
             _statusManager = statusManager;
             _animal.services = new();
+            Clean = clean;
+            ClawClipping = clawClipping;
+           
 
         }
 
 
         // Add Clean service
         public void AddCleanService()
-        {   
-            _animal.services.Add(_servicefactory(clean.Name,clean.Description, clean.Cost));
+        {
+           
+            _animal.services.Add(Clean);
 
             Console.WriteLine("Clean Service is added");
         }
@@ -44,7 +49,7 @@ namespace KennelLibrary.animal
         public void AddClawClippingService()
         {
 
-            _animal.services.Add(_servicefactory(clawClipping.Name, clawClipping.Description, clawClipping.Cost));
+            _animal.services.Add(ClawClipping);
             Console.WriteLine("ClawClipping Service is added");
 
         }
@@ -64,6 +69,8 @@ namespace KennelLibrary.animal
 
             return ServiceCost;
         }
+
+
 
         //Calculate All Costs(duration+ services)
         public decimal CalculateAllCosts()
